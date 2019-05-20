@@ -2,7 +2,6 @@ package com.github.roger.cache.config;
 
 import com.github.roger.aspect.MultiLayeringCacheAspect;
 import com.github.roger.cache.properties.MultiLayeringCacheProperties;
-import org.github.roger.MultiLayeringCache;
 import org.github.roger.MultiLayeringCacheManager;
 import org.github.roger.manager.ICacheManager;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
