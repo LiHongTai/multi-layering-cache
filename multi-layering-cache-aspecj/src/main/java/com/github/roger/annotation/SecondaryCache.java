@@ -14,8 +14,10 @@ public @interface SecondaryCache {
 
     /**
      * 缓存有效时间
+     * 不能设置成0 因为设置成0 后，如果注解中不配置该项属性
+     * 则redis保存时有误
      */
-    long expireTime() default 0;
+    long expireTime() default 5;
 
     /**
      * 缓存主动在失效前强制刷新缓存的时间
@@ -23,7 +25,7 @@ public @interface SecondaryCache {
      *
      * @return long
      */
-    long preloadTime() default 0;
+    long preloadTime() default 1;
 
     /**
      * 时间单位 {@link TimeUnit}
