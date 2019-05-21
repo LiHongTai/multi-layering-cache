@@ -1,6 +1,8 @@
 package org.github.roger.serializer;
 
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.github.roger.enumeration.Type;
 import org.github.roger.exception.SerializationException;
 
@@ -11,15 +13,13 @@ import java.util.Set;
  * 序列化包装类
  *
  */
+@NoArgsConstructor
+@Data
 public class FastJsonSerializerWrapper {
-    @Getter
+
     private Object content;
 
-    @Getter
     private String type;
-
-    public FastJsonSerializerWrapper() {
-    }
 
     public FastJsonSerializerWrapper(Object content) {
         this.content = content;
