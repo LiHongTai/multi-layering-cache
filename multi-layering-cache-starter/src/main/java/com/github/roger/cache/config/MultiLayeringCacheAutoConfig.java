@@ -26,7 +26,7 @@ public class MultiLayeringCacheAutoConfig {
     @Bean
     //如果项目中自己定义了ICacheManager实例，则这个实例不必创建
     @ConditionalOnMissingBean(ICacheManager.class)
-    public ICacheManager cacheManager(RedisTemplate<String, Object> redisTemplate) {
+    public ICacheManager cacheManager(RedisTemplate<String, Object> redisTemplate ,MultiLayeringCacheProperties properties) {
         MultiLayeringCacheManager layeringCacheManager = new MultiLayeringCacheManager(redisTemplate);
 
         return layeringCacheManager;
