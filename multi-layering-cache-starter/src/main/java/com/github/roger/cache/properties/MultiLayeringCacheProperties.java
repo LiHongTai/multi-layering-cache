@@ -3,7 +3,7 @@ package com.github.roger.cache.properties;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties("spring.multi-layering-cache")
+@ConfigurationProperties( prefix = "spring.multi-layering-cache")
 @Data
 public class MultiLayeringCacheProperties {
 
